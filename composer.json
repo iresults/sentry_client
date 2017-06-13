@@ -3,7 +3,7 @@
     "description": "TYPO3 Extension for exception logging with sentry, see http://www.getsentry.com",
     "type": "typo3-cms-extension",
     "require": {
-        "typo3/cms-core": ">=6.2.0,<8.9.99"
+        "sentry/sentry": "^1.7"
     },
     "license": [
         "GPL-2.0+"
