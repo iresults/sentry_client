@@ -1,5 +1,5 @@
 <?php
-namespace Iresults\SentryClient;
+namespace SentryClient;
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

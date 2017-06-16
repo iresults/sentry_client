@@ -6,7 +6,7 @@
  * Time: 14:15
  */
 
-namespace Iresults\SentryClient;
+namespace SentryClient;
 
 
 class DebugExceptionHandler extends \TYPO3\CMS\Core\Error\DebugExceptionHandler

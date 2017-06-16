@@ -6,7 +6,7 @@
  * Time: 11:43
  */
 
-namespace Iresults\SentryClient;
+namespace SentryClient;
 
 
 class ErrorHandler extends \TYPO3\CMS\Core\Error\ErrorHandler

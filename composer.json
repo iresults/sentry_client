@@ -1,12 +1,13 @@
 {
-    "name": "lemming/sentry_client",
+    "name": "comsolit/sentry_client",
     "description": "TYPO3 Extension for exception logging with sentry, see http://www.getsentry.com",
     "type": "typo3-cms-extension",
     "require": {
-        "sentry/sentry": "^1.7"
+        "typo3/cms-core": ">=6.2.0,<8.9.99",
+        "sentry/sentry": "^1.8@dev"
     },
     "license": [
-        "GPL-2.0+"
+        "GPL-3.0+"
     ],
     "authors": [
         {
@@ -24,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Iresults\\SentryClient\\": "Classes"
+            "SentryClient\\": "Classes"
         }
     }
 }
