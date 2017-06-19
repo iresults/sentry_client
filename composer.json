@@ -1,6 +1,6 @@
 {
     "name": "comsolit/sentry_client",
-    "description": "TYPO3 Extension for exception logging with sentry, see http://www.getsentry.com",
+    "description": "TYPO3 extension for error and exception logging with Sentry, https://sentry.io",
     "type": "typo3-cms-extension",
     "require": {
         "typo3/cms-core": ">=6.2.0,<8.9.99",
@@ -17,6 +17,10 @@
         {
             "name": "Daniel Corn",
             "email": "daniel@iresults.li"
+        },
+        {
+            "name": "Peter Bittner",
+            "email": "bittner@comsolit.com"
         }
     ],
     "replace": {

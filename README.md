@@ -59,16 +59,22 @@ via the `Install Tool` or in `typo3conf/AdditionalConfiguration.php`.
 Configuration
 -------------
 
-Set the dsn (e.g. `http://public_key:secret_key@your-sentry-server.com/project-id`)
+Set the [Sentry DSN](https://docs.sentry.io/quickstart/#about-the-dsn)
+(e.g. `https://public_key:secret_key@your-sentry-server.com/project-id`)
 in the `Extension Manager`.
 
-NOTE: This will be added in your `typo3conf/LocalConfiguration.php` file at:
+This will be added in your `typo3conf/LocalConfiguration.php` file at:
 
 ``` php
 'EXT' => [
     'extConf' => [
         'sentry_client' => ...
 ```
+
+NOTE: For professional deployments you should consider using something like
+[phpdotenv](https://packagist.org/packages/vlucas/phpdotenv) to manage your
+secrets instead of using the Extension Manager, and leave your
+`LocalConfiguration` under version control.
 
 Development
 -----------
