@@ -27,7 +27,6 @@ Installation
       "type": "git"
     }
   ],
-  "minimum-stability": "dev",
   "require": {
     "comsolit/sentry_client": "dev-master"
   }
