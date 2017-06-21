@@ -1,11 +1,11 @@
 Sentry Client for TYPO3
 =======================
 
-A TYPO3 extension for exception logging with Sentry, https://www.sentry.io
+A TYPO3 extension for PHP exception logging with Sentry, https://www.sentry.io
 
-Logs frontend errors and exceptions to your Sentry instance. Note that logging
-backend issues is not yet supported by TYPO3 (it's on the todo list for v9,
-according to core developer Markus Klein).
+Logs frontend PHP errors and exceptions to your Sentry instance. Note that
+logging backend issues is not yet supported by TYPO3 (it's on the todo list
+for v9, according to core developer Markus Klein).
 
 Based on the official Sentry PHP client,
 [`sentry/sentry`](https://packagist.org/packages/sentry/sentry).
@@ -75,6 +75,27 @@ NOTE: For professional deployments you should consider using something like
 [phpdotenv](https://packagist.org/packages/vlucas/phpdotenv) to manage your
 secrets instead of using the Extension Manager, and leave your
 `LocalConfiguration` under version control.
+
+JavaScript Error Logging
+------------------------
+
+For logging your JavaScript errors to Sentry see the [JavaScript Sentry docs](
+https://docs.sentry.io/clients/javascript/).
+
+If you include your JavaScript sources via TypoScript it can be handy to avoid
+hard-coding and define a `SENTRY_DSN_PUBLIC` value in your system environment
+(e.g. via a `.env` file read by [phpdotenv](https://packagist.org/packages/vlucas/phpdotenv)).
+You can read the value in TypoScript using the [`getenv` command](
+https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html#getenv)
+like this:
+
+``` typo3_typoscript
+page.headerData {
+  99 = TEXT
+  99.data = getenv : SENTRY_DSN_PUBLIC
+  99.stdWrap.wrap = <script src="https://cdn.ravenjs.com/3.16.0/raven.min.js" crossorigin="anonymous"></script><script>Raven.config('|').install();</script>
+}
+```
 
 Development
 -----------

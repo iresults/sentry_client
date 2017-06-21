@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
 	'title' => 'Sentry Client',
-	'description' => 'TYPO3 extension for error and exception logging with Sentry, https://sentry.io',
+	'description' => 'TYPO3 extension for PHP error and exception logging with Sentry, https://sentry.io',
 	'category' => 'services',
 	'version' => '1.3.0',
 	'state' => 'beta',
