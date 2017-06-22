@@ -47,13 +47,15 @@ Installation
         'systemLogLevel' => '0',
         'syslogErrorReporting' => E_ALL,
         'belogErrorReporting' => E_ALL,
+        'exceptionalErrors' => E_RECOVERABLE_ERROR | E_USER_DEPRECATED,
+        'errorHandlerErrors' => E_WARNING | E_USER_ERROR | E_USER_WARNING | E_USER_NOTICE | E_RECOVERABLE_ERROR | E_DEPRECATED | E_USER_DEPRECATED,
         'errorHandler' => 'SentryClient\\ErrorHandler',
         'debugExceptionHandler' => 'SentryClient\\DebugExceptionHandler',
         'productionExceptionHandler' => 'SentryClient\\ProductionExceptionHandler',
     ]
 ```
 Alternatively, you can [set those values](
-https://github.com/comsolit/sentry_client/blob/master/ext_localconf.php#L6-L17)
+https://github.com/comsolit/sentry_client/blob/master/ext_localconf.php#L6-L19)
 via the `Install Tool` or in `typo3conf/AdditionalConfiguration.php`.
 
 Configuration

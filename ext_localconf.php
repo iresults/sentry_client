@@ -12,6 +12,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLog'] = '';  // no local logging (= ma
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '0';  // log everything
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['syslogErrorReporting'] = E_ALL;
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['belogErrorReporting'] = E_ALL;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = E_RECOVERABLE_ERROR | E_USER_DEPRECATED;
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['errorHandlerErrors'] = E_WARNING | E_USER_ERROR | E_USER_WARNING | E_USER_NOTICE | E_RECOVERABLE_ERROR | E_DEPRECATED | E_USER_DEPRECATED;
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['errorHandler'] = 'SentryClient\\ErrorHandler';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['debugExceptionHandler'] = 'SentryClient\\DebugExceptionHandler';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['productionExceptionHandler'] = 'SentryClient\\ProductionExceptionHandler';
