@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = array (
+$EM_CONF[$_EXTKEY] = [
 	'title' => 'Sentry Client',
 	'description' => 'Sentry Client for TYPO3 - https://www.getsentry.com/',
 	'category' => 'services',
@@ -12,17 +12,11 @@ $EM_CONF[$_EXTKEY] = array (
 	'author' => 'Christoph Lehmann',
 	'author_email' => 'christoph.lehmann@networkteam.com',
 	'author_company' => 'networkteam GmbH',
-	'constraints' => 
-	array (
-		'depends' => 
-		array (
+	'constraints' => [
+		'depends' => [
 			'typo3' => '6.2.0-7.9.99',
-		),
-		'conflicts' => 
-		array (
-		),
-		'suggests' => 
-		array (
-		),
-	),
-);
+		],
+		'conflicts' => [],
+		'suggests' => [],
+	],
+];

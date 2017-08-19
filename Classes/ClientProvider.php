@@ -14,17 +14,17 @@ class ClientProvider
     /**
      * Log an exception to sentry
      *
-     * @param \Exception $exception The Exception object.
+     * @param \Throwable $exception The Exception object.
      * @param array      $data      Additional attributes to pass with this event (see Sentry docs).
      */
-    public static function captureException($exception, $data = null)
+    public static function captureException(\Throwable $exception, $data = null)
     {
         if (null === $data) {
             $data = [
-                'extra' => array(
+                'extra' => [
                     'backend_user' => self::getBackendUserAddress(),
                     'client_ip'    => isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '',
-                ),
+                ],
             ];
         }
 
@@ -146,12 +146,12 @@ class ClientProvider
      */
     private static function getTagsContext()
     {
-        return array(
+        return [
             'typo3_version'       => TYPO3_version,
             'typo3_mode'          => TYPO3_MODE,
             'php_version'         => phpversion(),
             'application_context' => (string)GeneralUtility::getApplicationContext(),
-        );
+        ];
     }
 
     /**
@@ -183,10 +183,10 @@ class ClientProvider
      */
     private static function getClientOptions()
     {
-        $clientOptions = array(
+        $clientOptions = [
             'error_types'                         => static::getErrorMask(),
             'install_default_breadcrumb_handlers' => false,
-        );
+        ];
         if (isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['curlProxyServer'])) {
             $clientOptions['http_proxy'] = $GLOBALS['TYPO3_CONF_VARS']['SYS']['curlProxyServer'];
         }
