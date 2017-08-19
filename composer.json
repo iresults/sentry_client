@@ -5,7 +5,7 @@
     "require": {
         "php": "^7.0",
         "typo3/cms-core": ">=8.7.0,<8.7.99",
-        "sentry/sentry": "~1.7.1"
+        "sentry/sentry": "^1.7"
     },
     "license": [
         "GPL-2.0+"
