@@ -14,10 +14,10 @@ class ClientProvider
     /**
      * Log an exception to sentry
      *
-     * @param \Exception $exception The Exception object.
+     * @param \Throwable $exception The Exception object.
      * @param array      $data      Additional attributes to pass with this event (see Sentry docs).
      */
-    public static function captureException($exception, $data = null)
+    public static function captureException(\Throwable $exception, $data = null)
     {
         if (null === $data) {
             $data = [
