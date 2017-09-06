@@ -93,9 +93,23 @@ like this:
 
 ``` typo3_typoscript
 page.headerData {
-  99 = TEXT
-  99.data = getenv : SENTRY_DSN_PUBLIC
-  99.stdWrap.wrap = <script src="https://cdn.ravenjs.com/3.16.0/raven.min.js" crossorigin="anonymous"></script><script>Raven.config('|').install();</script>
+  999 = COA
+  999 {
+    10 = TEXT
+    10.value = <script src="https://cdn.ravenjs.com/3.16.0/raven.min.js" crossorigin="anonymous"></script>
+    20 = TEXT
+    20.value = <script>Raven.config('
+    30 = TEXT
+    30.data = getenv : SENTRY_DSN_PUBLIC
+    30.stdWrap.wrap = |
+    40 = TEXT
+    40.value = ', {release: '
+    50 = TEXT
+    50.data = getenv : PROJECT_VERSION
+    50.stdWrap.wrap = |
+    60 = TEXT
+    60.value = '}).install();</script>
+  }
 }
 ```
 

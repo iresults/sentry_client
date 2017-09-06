@@ -94,6 +94,7 @@ class ClientProvider
             $client = new \Raven_Client(static::getDsn(), self::getClientOptions());
             $client->user_context(static::getUserContext());
             $client->tags_context(static::getTagsContext());
+            $client->setRelease(getenv('APP_VERSION'));
 
             return $client;
         } else {
