@@ -2,6 +2,7 @@
     "name": "comsolit/sentry_client",
     "description": "TYPO3 extension for PHP error and exception logging with Sentry, https://sentry.io",
     "type": "typo3-cms-extension",
+    "version": "8.0.0",
     "require": {
         "typo3/cms-core": ">=6.2.0,<8.9.99",
         "sentry/sentry": "^1.7"
